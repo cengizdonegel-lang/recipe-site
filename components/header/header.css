@@ -16,8 +16,19 @@
   text-decoration: none;
   color: var(--text);
   font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a:focus {
   color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.04);
+}
+
+.nav a.active,
+.nav a[aria-current="page"] {
+  color: var(--accent);
+  background-color: rgba(0, 0, 0, 0.04);
 }

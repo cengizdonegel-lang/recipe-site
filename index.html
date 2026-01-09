@@ -13,21 +13,7 @@
 <body>
 
   <!-- HEADER -->
-  <!-- components/header/header.html içeriği -->
-  <header class="site-header">
-    <div class="brand">
-      <span class="dot"></span>
-      <span>My Recipe Site</span>
-    </div>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="pages/about/index.html">About</a>
-      <a href="pages/contact/index.html">Contact</a>
-    </nav>
-  </header>
-<script src="components/card/card.js"></script>
-
-<include src="components/header/header.html">
+  <div data-include="/components/header/header.html"></div>
 
   <main class="container">
     <section class="card">
@@ -42,10 +28,9 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
-    <p>© 2026 My Recipe Site</p>
-  </footer>
+  <div data-include="/components/footer/footer.html"></div>
 
-  <script src="components/card/card.js"></script>
+  <script src="/components/include.js" defer></script>
+  <script src="/components/card/card.js" defer></script>
 </body>
 </html>

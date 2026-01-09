@@ -19,18 +19,7 @@
 <body>
 
   <!-- HEADER (components/header/header.html) -->
-  <header class="site-header">
-    <div class="brand">
-      <span class="dot"></span>
-      <span>My Recipe Site</span>
-    </div>
-
-    <nav class="nav">
-      <a href="../../index.html">Home</a>
-      <a href="index.html">About</a>
-      <a href="../contact/index.html">Contact</a>
-    </nav>
-  </header>
+  <div data-include="/components/header/header.html"></div>
 
   <!-- MAIN -->
   <main class="container about">
@@ -65,9 +54,8 @@
   </main>
 
   <!-- FOOTER (components/footer/footer.html) -->
-  <footer class="site-footer">
-    <p>© 2026 My Recipe Site Cengiz DONEGEL</p>
-  </footer>
+  <div data-include="/components/footer/footer.html"></div>
 
+  <script src="/components/include.js" defer></script>
 </body>
 </html>
