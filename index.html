@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Website</title>
+  <meta charset="UTF-8">
+  <title>Home | Recipe</title>
+
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="components/header/header.css">
+  <link rel="stylesheet" href="components/card/card.css">
+  <link rel="stylesheet" href="components/footer/footer.css">
 </head>
+
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is the homepage...</p>
+
+  <!-- HEADER -->
+  <!-- components/header/header.html içeriği -->
+  <header class="site-header">
+    <div class="brand">
+      <span class="dot"></span>
+      <span>My Recipe Site</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="pages/about/index.html">About</a>
+      <a href="pages/contact/index.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="card-content">
+        <h1>Pasta Aglio e Olio</h1>
+        <p class="muted">
+          A simple and fast recipe that I love cooking after a long day.
+        </p>
+        <button class="primary">Print Recipe</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2026 My Recipe Site</p>
+  </footer>
+
+  <script src="components/card/card.js"></script>
 </body>
 </html>
