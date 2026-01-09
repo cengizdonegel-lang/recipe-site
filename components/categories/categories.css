@@ -1,0 +1,87 @@
+/* Categories component styles (moved from styles/base.css) */
+
+.categories-box {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.03);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.categories-title {
+  font-size: 16px;
+  margin: 0 0 8px 0;
+  color: #fff;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.category-list li {
+  list-style: none;
+}
+
+/* Button-style category links */
+.category-list a {
+  color: #cbd5e1;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.03);
+  background: transparent;
+  transition: background 0.12s ease, transform 0.08s ease, color 0.12s ease;
+}
+
+.category-list a:hover,
+.category-list a:focus {
+  color: #fff;
+  background: rgba(255,255,255,0.04);
+  transform: translateY(-2px);
+}
+
+/* Active state (selected category) */
+.category-list a.active,
+.category-list a[aria-pressed="true"] {
+  color: #fff;
+  background: #0d6efd; /* Bootstrap primary */
+  border-color: rgba(13,110,253,0.7);
+}
+
+@media (max-width: 767px) {
+  .categories-box {
+    width: 100%;
+  }
+}
+
+/* Carousel + fixed left-side menu (positioning) */
+.carousel-with-menu { position: relative; }
+.carousel-with-menu .carousel { overflow: visible; }
+
+.carousel-menu{
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 240px;
+  z-index: 5;
+}
+
+.carousel-menu .categories-box{
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(15,23,32,0.9);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* Orange hover border for menu items */
+.category-list a{ border-color: rgba(255,255,255,0.03); transition: background 0.12s ease, transform 0.08s ease, color 0.12s ease, border-color 0.12s ease; }
+.category-list a:hover, .category-list a:focus{ border-color: #ff7a18; }
+
+@media (max-width: 767px) {
+  .carousel-menu { position: static; transform: none; width: 100%; margin-top: 12px; display: block !important; }
+}
