@@ -10,6 +10,15 @@
         el.innerHTML = html;
         // After insertion, run activation for navs inside the included block
         activateNav(el);
+        // Initialize any Bootstrap collapse elements added dynamically
+        if (window.bootstrap && typeof window.bootstrap.Collapse === 'function') {
+          el.querySelectorAll('.collapse').forEach(c => {
+            try {
+              // eslint-disable-next-line no-new
+              new bootstrap.Collapse(c, { toggle: false });
+            } catch (e) {}
+          });
+        }
       } catch (err) {
         console.error('Include failed:', src, err);
       }
@@ -17,12 +26,11 @@
   }
 
   function activateNav(container) {
-    const links = (container || document).querySelectorAll('.nav a');
+    const links = (container || document).querySelectorAll('.nav a, .navbar-nav .nav-link');
     if (!links.length) return;
     const current = (location.pathname || '/').replace(/\/$/, '') || '/';
     links.forEach((a) => {
       try {
-        // Resolve href relative to current origin
         const url = new URL(a.getAttribute('href'), location.origin);
         const path = (url.pathname || '/').replace(/\/$/, '') || '/';
         if (path === current) {

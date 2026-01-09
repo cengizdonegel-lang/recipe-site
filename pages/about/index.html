@@ -18,12 +18,12 @@
 </head>
 
 <body>
-
-  <!-- HEADER (components/header/header.html) -->
-  <div data-include="/components/header/header.html"></div>
+  <div class="site-wrapper">
+    <!-- HEADER (components/header/header.html) -->
+    <div data-include="/components/header/header.html"></div>
 
   <!-- MAIN -->
-  <main class="container about">
+  <main class="site-main container about">
     <h1>About This Project</h1>
 
     <p>
@@ -54,8 +54,9 @@
     </section>
   </main>
 
-  <!-- FOOTER (components/footer/footer.html) -->
-  <div data-include="/components/footer/footer.html"></div>
+    <!-- FOOTER (components/footer/footer.html) -->
+    <div data-include="/components/footer/footer.html"></div>
+  </div>
 
   <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
   <script src="/components/include.js" defer></script>

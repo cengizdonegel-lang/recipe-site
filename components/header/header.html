@@ -1,11 +1,20 @@
-<header class="site-header">
-  <div class="brand">
-    <span class="dot"></span>
-    <span>My Recipe Site</span>
+<nav class="navbar navbar-expand-md navbar-dark bg-transparent" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="/index.html">
+      <span class="dot me-2"></span>
+      <span>My Recipe Site</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/pages/about/index.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/pages/contact/index.html">Contact</a></li>
+      </ul>
+    </div>
   </div>
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <a href="/index.html">Home</a>
-    <a href="/pages/about/index.html">About</a>
-    <a href="/pages/contact/index.html">Contact</a>
-  </nav>
-</header>
+</nav>

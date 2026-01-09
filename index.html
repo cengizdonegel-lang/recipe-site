@@ -12,24 +12,25 @@
 </head>
 
 <body>
+  <div class="site-wrapper">
+    <!-- HEADER -->
+    <div data-include="/components/header/header.html"></div>
 
-  <!-- HEADER -->
-  <div data-include="/components/header/header.html"></div>
+    <main class="site-main container">
+      <section class="card">
+        <div class="card-content">
+          <h1>Pasta Aglio e Olio</h1>
+          <p class="muted">
+            A simple and fast recipe that I love cooking after a long day.
+          </p>
+          <button class="primary">Print Recipe</button>
+        </div>
+      </section>
+    </main>
 
-  <main class="container">
-    <section class="card">
-      <div class="card-content">
-        <h1>Pasta Aglio e Olio</h1>
-        <p class="muted">
-          A simple and fast recipe that I love cooking after a long day.
-        </p>
-        <button class="primary">Print Recipe</button>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <div data-include="/components/footer/footer.html"></div>
+    <!-- FOOTER -->
+    <div data-include="/components/footer/footer.html"></div>
+  </div>
 
   <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
   <script src="/components/include.js" defer></script>

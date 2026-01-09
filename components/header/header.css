@@ -1,34 +1,29 @@
-.site-header {
-  max-width: 1000px;
-  margin: auto;
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.navbar-brand .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
 }
 
-.nav {
-  display: flex;
-  gap: 16px;
-}
-
-.nav a {
-  text-decoration: none;
-  color: var(--text);
+.navbar .nav-link {
+  color: var(--bs-gray-900);
   font-weight: 500;
-  padding: 4px 8px;
-  border-radius: 4px;
 }
 
-.nav a:hover,
-.nav a:focus {
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
   color: var(--accent);
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0,0,0,0.04);
 }
 
-.nav a.active,
-.nav a[aria-current="page"] {
+.navbar .nav-link.active,
+.navbar .nav-link[aria-current="page"] {
   color: var(--accent);
-  background-color: rgba(0, 0, 0, 0.04);
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding: 12px 0;
+  }
 }
