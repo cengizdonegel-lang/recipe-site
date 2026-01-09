@@ -24,33 +24,50 @@
 
   <!-- MAIN -->
   <main class="site-main container contact">
-    <h1>Contact</h1>
+      <div class="row">
+        <aside class="col-md-3">
+          <nav class="categories-box" aria-label="Contact and site categories">
+            <h3 class="categories-title">Categories</h3>
+            <ul class="category-list list-unstyled" role="group" aria-label="Categories">
+              <li><a href="#">All</a></li>
+              <li><a href="#">Pasta</a></li>
+              <li><a href="#">Salads</a></li>
+              <li><a href="#">Desserts</a></li>
+              <li><a href="#">Quick Meals</a></li>
+              <li><a href="#">Vegetarian</a></li>
+            </ul>
+          </nav> 
+        </aside>
 
-    <p class="muted">
-      If you have questions about the recipe or this project, feel free to send a message.
-    </p>
+        <div class="col-md-9 main-content">
+          <h1>Contact</h1>
 
-    <form class="contact-form" id="contactForm">
-      <label>
-        Name
-        <input type="text" required placeholder="Your name">
-      </label>
+          <p class="muted">
+            If you have questions about the recipe or this project, feel free to send a message.
+          </p>
 
-      <label>
-        Email
-        <input type="email" required placeholder="your@email.com">
-      </label>
+          <form class="contact-form" id="contactForm">
+            <label>
+              Name
+              <input type="text" required placeholder="Your name">
+            </label>
 
-      <label>
-        Message
-        <textarea rows="4" placeholder="Your message"></textarea>
-      </label>
+            <label>
+              Email
+              <input type="email" required placeholder="your@email.com">
+            </label>
 
-      <button type="submit" class="primary">Send Message</button>
+            <label>
+              Message
+              <textarea rows="4" placeholder="Your message"></textarea>
+            </label>
 
-      <p class="form-status" id="formStatus"></p>
-    </form>
-  </main>
+            <button type="submit" class="primary">Send Message</button>
+
+            <p class="form-status" id="formStatus"></p>
+          </form>
+        </div>
+      </div>
 
     <!-- FOOTER -->
     <div data-include="/components/footer/footer.html"></div>

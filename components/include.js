@@ -8,8 +8,10 @@
         if (!res.ok) throw new Error(res.statusText);
         const html = await res.text();
         el.innerHTML = html;
+
         // After insertion, run activation for navs inside the included block
         activateNav(el);
+
         // Initialize any Bootstrap collapse elements added dynamically
         if (window.bootstrap && typeof window.bootstrap.Collapse === 'function') {
           el.querySelectorAll('.collapse').forEach(c => {
@@ -19,6 +21,9 @@
             } catch (e) {}
           });
         }
+
+        // Initialize category button groups inside the include
+        initCategoryButtons(el);
       } catch (err) {
         console.error('Include failed:', src, err);
       }
@@ -46,8 +51,38 @@
     });
   }
 
+  function initCategoryButtons(container) {
+    const root = container || document;
+    const lists = root.querySelectorAll('.category-list');
+    lists.forEach((ul) => {
+      const links = ul.querySelectorAll('a');
+      if (!links.length) return;
+      // make first item active if none are active
+      const hasActive = Array.from(links).some(a => a.classList.contains('active'));
+      if (!hasActive) {
+        links[0].classList.add('active');
+        links[0].setAttribute('aria-pressed', 'true');
+      }
+
+      links.forEach((a) => {
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          links.forEach(x => { x.classList.remove('active'); x.removeAttribute('aria-pressed'); });
+          a.classList.add('active');
+          a.setAttribute('aria-pressed', 'true');
+          // Optional: dispatch event so other parts of the app can filter content
+          const ev = new CustomEvent('category:select', { detail: { category: a.dataset.category || a.textContent.trim().toLowerCase() } });
+          ul.dispatchEvent(ev);
+        });
+      });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
-    loadIncludes().then(() => activateNav());
+    loadIncludes().then(() => {
+      activateNav();
+      initCategoryButtons();
+    });
     // Also rerun activateNav on history navigation
     window.addEventListener('popstate', () => activateNav());
   });
