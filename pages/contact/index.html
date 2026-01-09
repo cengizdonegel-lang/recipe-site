@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | My Recipe Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Global -->
+  <link rel="stylesheet" href="../../styles/base.css">
+
+  <!-- Components -->
+  <link rel="stylesheet" href="../../components/header/header.css">
+  <link rel="stylesheet" href="../../components/footer/footer.css">
+
+  <!-- Page specific -->
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="brand">
+      <span class="dot"></span>
+      <span>My Recipe Site</span>
+    </div>
+
+    <nav class="nav">
+      <a href="../../index.html">Home</a>
+      <a href="../about/index.html">About</a>
+      <a href="index.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container contact">
+    <h1>Contact</h1>
+
+    <p class="muted">
+      If you have questions about the recipe or this project, feel free to send a message.
+    </p>
+
+    <form class="contact-form" id="contactForm">
+      <label>
+        Name
+        <input type="text" required placeholder="Your name">
+      </label>
+
+      <label>
+        Email
+        <input type="email" required placeholder="your@email.com">
+      </label>
+
+      <label>
+        Message
+        <textarea rows="4" placeholder="Your message"></textarea>
+      </label>
+
+      <button type="submit" class="primary">Send Message</button>
+
+      <p class="form-status" id="formStatus"></p>
+    </form>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2026 My Recipe Site • Contact Page</p>
+  </footer>
+
+  <!-- Page JS -->
+  <script src="contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+.site-footer {
+  max-width: 1000px;
+  margin: 32px auto;
+  padding: 16px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+}
