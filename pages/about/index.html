@@ -11,6 +11,7 @@
 
   <!-- Components -->
   <link rel="stylesheet" href="../../components/header/header.css">
+  <link rel="stylesheet" href="/components/categories/categories.css">
   <link rel="stylesheet" href="../../components/footer/footer.css">
 
   <!-- Page specific -->
@@ -26,17 +27,7 @@
   <main class="site-main container about">
       <div class="row">
         <aside class="col-md-3">
-          <nav class="categories-box" aria-label="Site categories">
-            <h3 class="categories-title">Categories</h3>
-            <ul class="category-list list-unstyled" role="group" aria-label="Categories">
-              <li><a href="#">All</a></li>
-              <li><a href="#">Pasta</a></li>
-              <li><a href="#">Salads</a></li>
-              <li><a href="#">Desserts</a></li>
-              <li><a href="#">Quick Meals</a></li>
-              <li><a href="#">Vegetarian</a></li>
-            </ul>
-          </nav> 
+          <div data-include="/components/categories/categories.html"></div>
         </aside>
 
         <div class="col-md-9 main-content">
