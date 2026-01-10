@@ -1,5 +1,23 @@
 /* Categories component styles (moved from styles/base.css) */
 
+/* Card wrapper to keep categories visually consistent on pages like About/Contact */
+.categories-card {
+  background: transparent; /* transparent so it blends with page background */
+  border: none; /* remove default card border */
+  box-shadow: none; /* neutral look */
+}
+.categories-card .card-body {
+  padding: 0; /* category block handles its own padding */
+}
+
+/* About page variant: match the about-box styling */
+.categories-card.about-style .categories-box {
+  background: #000; /* black background for About page */
+  border: 1px solid rgba(255,255,255,0.04); /* subtle contrast */
+  border-radius: 12px;
+  padding: 16px;
+}
+
 .categories-box {
   background: rgba(255,255,255,0.02);
   border: 1px solid rgba(255,255,255,0.03);
@@ -58,25 +76,9 @@
   }
 }
 
-/* Carousel + fixed left-side menu (positioning) */
+/* Left column behavior (previously used for carousel menu) */
 .carousel-with-menu { position: relative; }
 .carousel-with-menu .carousel { overflow: visible; }
-
-.carousel-menu{
-  position: absolute;
-  left: 0.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 240px;
-  z-index: 5;
-}
-
-.carousel-menu .categories-box{
-  padding: 12px;
-  border-radius: 10px;
-  background: rgba(15,23,32,0.9);
-  border: 1px solid rgba(255,255,255,0.04);
-}
 
 /* Orange hover border for menu items */
 .category-list a{ border-color: rgba(255,255,255,0.03); transition: background 0.12s ease, transform 0.08s ease, color 0.12s ease, border-color 0.12s ease; }

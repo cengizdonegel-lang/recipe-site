@@ -1,0 +1,13 @@
+/* Dashboard layout tweaks */
+.dashboard-header h1 { margin: 0; font-size: 1.25rem; }
+.dashboard-main { min-height: 360px; }
+#dashboardContent { margin-top: 12px; }
+
+/* Ensure categories are displayed as a normal left column (not absolute) */
+@media (min-width: 768px) {
+  aside.col-md-3 { position: static; }
+}
+
+@media (max-width: 767px) {
+  .dashboard-main { padding-top: 0.5rem; }
+}
