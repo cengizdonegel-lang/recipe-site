@@ -32,16 +32,20 @@
   margin: 16px 0;
 }
 
-button {
+.btn {
+  display: inline-block;
   padding: 8px 12px;
   border-radius: 8px;
   background: transparent;
   color: var(--text);
   border: 1px solid var(--border);
+  text-decoration: none;
 }
 
+.btn.primary,
 button.primary {
   background: var(--accent);
   border: none;
   font-weight: bold;
+  color: #fff;
 }
