@@ -18,6 +18,14 @@
   padding: 16px;
 }
 
+/* Home page variant: black background for left categories */
+.categories-card.home-style .categories-box {
+  background: #000; /* black for Home categories */
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 12px;
+  padding: 16px;
+}
+
 .categories-box {
   background: rgba(255,255,255,0.02);
   border: 1px solid rgba(255,255,255,0.03);
