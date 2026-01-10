@@ -26,6 +26,14 @@
   padding: 16px;
 }
 
+/* Contact page variant: black background like Home/About */
+.categories-card.contact-style .categories-box {
+  background: #000; /* black for Contact categories */
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 12px;
+  padding: 16px;
+}
+
 .categories-box {
   background: rgba(255,255,255,0.02);
   border: 1px solid rgba(255,255,255,0.03);
