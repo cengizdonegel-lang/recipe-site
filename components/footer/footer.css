@@ -2,6 +2,7 @@
   background: #0f1720; /* dark slate */
   border-top: 1px solid rgba(255,255,255,0.04);
   color: var(--bs-gray-200);
+  padding: 0; /* normalize outer padding so inner controls sizing */
 }
 
 .footer-inner {
@@ -13,6 +14,7 @@
   justify-content: space-between;
   gap: 24px;
   flex-wrap: wrap;
+  min-height: 72px; /* ensure consistent vertical size across pages */
 }
 
 .footer-left .brand {
