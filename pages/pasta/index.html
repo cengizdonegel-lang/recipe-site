@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pasta Recipes | Recipe Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/components/header/header.css">
+  <link rel="stylesheet" href="/components/categories/categories.css">
+  <link rel="stylesheet" href="/components/card/card.css">
+  <link rel="stylesheet" href="/components/footer/footer.css">
+</head>
+
+<body>
+  <div class="site-wrapper">
+    <div data-include="/components/header/header.html"></div>
+
+    <main class="site-main container">
+      <div class="row mb-4">
+        <aside class="col-md-3 d-none d-md-block">
+          <div class="card categories-card home-style">
+            <div class="card-body">
+              <div data-include="/components/categories/categories.html"></div>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-md-9">
+          <h1>Pasta Recipes</h1>
+          <p class="lead">Discover delicious pasta recipes from classic Italian dishes to modern variations.</p>
+          
+          <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
+            <div class="col">
+              <div class="card h-100">
+                <img src="/assets/images/pasta.jpg" class="card-img-top" alt="Pasta">
+                <div class="card-body">
+                  <h5 class="card-title">Classic Spaghetti</h5>
+                  <p class="card-text">Traditional Italian spaghetti with rich tomato sauce.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div data-include="/components/footer/footer.html"></div>
+  </div>
+
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="/components/include.js" defer></script>
+</body>
+</html>
