@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Link</title>
+</head>
+<body>
+  <h1>Test Page</h1>
+  <p>This is a simple test to verify links work.</p>
+  <a href="/pages/pasta/index.html">Click here to go to Pasta page</a>
+  
+  <script>
+    document.querySelector('a').addEventListener('click', function(e) {
+      console.log('Link clicked!', this.href);
+      console.log('Default prevented?', e.defaultPrevented);
+    });
+  </script>
+</body>
+</html>

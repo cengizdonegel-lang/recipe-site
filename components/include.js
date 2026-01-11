@@ -54,14 +54,17 @@
   function initCategoryButtons(container) {
     const root = container || document;
     const lists = root.querySelectorAll('.category-list');
+    console.log('initCategoryButtons: found', lists.length, 'category lists');
     lists.forEach((ul) => {
       const links = ul.querySelectorAll('a');
+      console.log('Found', links.length, 'category links');
       if (!links.length) return;
       
       // Set active state based on current page
       const currentPath = window.location.pathname;
       links.forEach((a) => {
         const linkPath = a.getAttribute('href');
+        console.log('Link:', linkPath, 'Current:', currentPath);
         if (linkPath && (currentPath === linkPath || currentPath.endsWith(linkPath))) {
           a.classList.add('active');
           a.setAttribute('aria-pressed', 'true');
@@ -74,6 +77,8 @@
         links[0].classList.add('active');
         links[0].setAttribute('aria-pressed', 'true');
       }
+      
+      console.log('Category buttons initialized - NO click handlers added');
     });
   }
 
