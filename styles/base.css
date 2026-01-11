@@ -39,7 +39,7 @@
 .site-main {
   flex: 1 0 auto;
   padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 180px;
 }
 
 /* Categories styles moved to components/categories/categories.css */
