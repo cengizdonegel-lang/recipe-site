@@ -16,11 +16,39 @@
   padding: 2rem;
 }
 
-/* Company logo styling */
+/* Company logo styling - circular */
 .company-logo {
-  max-width: 200px;
-  height: auto;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid #ff8c00;
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+  margin-bottom: 1rem;
+}
+
+/* Jumbotron-style section */
+.jumbotron-style {
+  background-color: rgba(255, 255, 255, 0.03);
   border-radius: 8px;
+  padding: 2rem;
+}
+
+.jumbotron-style .display-4 {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.jumbotron-style .lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #cbd5e1;
+}
+
+.jumbotron-style hr {
+  border-top: 1px solid rgba(255, 140, 0, 0.3);
+  margin: 2rem 0;
 }
 
 .contact-form {
