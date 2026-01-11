@@ -57,24 +57,23 @@
     lists.forEach((ul) => {
       const links = ul.querySelectorAll('a');
       if (!links.length) return;
-      // make first item active if none are active
+      
+      // Set active state based on current page
+      const currentPath = window.location.pathname;
+      links.forEach((a) => {
+        const linkPath = a.getAttribute('href');
+        if (linkPath && (currentPath === linkPath || currentPath.endsWith(linkPath))) {
+          a.classList.add('active');
+          a.setAttribute('aria-pressed', 'true');
+        }
+      });
+      
+      // If no link is active, make first one active
       const hasActive = Array.from(links).some(a => a.classList.contains('active'));
       if (!hasActive) {
         links[0].classList.add('active');
         links[0].setAttribute('aria-pressed', 'true');
       }
-
-      links.forEach((a) => {
-        a.addEventListener('click', (e) => {
-          // Allow default navigation - remove preventDefault
-          links.forEach(x => { x.classList.remove('active'); x.removeAttribute('aria-pressed'); });
-          a.classList.add('active');
-          a.setAttribute('aria-pressed', 'true');
-          // Optional: dispatch event so other parts of the app can filter content
-          const ev = new CustomEvent('category:select', { detail: { category: a.dataset.category || a.textContent.trim().toLowerCase() } });
-          ul.dispatchEvent(ev);
-        });
-      });
     });
   }
 
