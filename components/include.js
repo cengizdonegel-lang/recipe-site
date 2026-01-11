@@ -66,7 +66,7 @@
 
       links.forEach((a) => {
         a.addEventListener('click', (e) => {
-          e.preventDefault();
+          // Allow default navigation - remove preventDefault
           links.forEach(x => { x.classList.remove('active'); x.removeAttribute('aria-pressed'); });
           a.classList.add('active');
           a.setAttribute('aria-pressed', 'true');
