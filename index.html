@@ -39,7 +39,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card h-100">
+              <div class="card h-100" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#saladModal">
                 <img src="/assets/images/salad.jpg" class="card-img-top" alt="Fresh salad">
                 <div class="card-body">
                   <h5 class="card-title">Fresh Salads</h5>
@@ -48,7 +48,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card h-100">
+              <div class="card h-100" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#dessertModal">
                 <img src="/assets/images/dessert.jpg" class="card-img-top" alt="Dessert">
                 <div class="card-body">
                   <h5 class="card-title">Sweet Desserts</h5>
@@ -57,7 +57,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card h-100">
+              <div class="card h-100" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#quickMealModal">
                 <img src="/assets/images/quick-meal.jpg" class="card-img-top" alt="Quick meal">
                 <div class="card-body">
                   <h5 class="card-title">Quick Meals</h5>
@@ -107,6 +107,142 @@
             <li>Crack the eggs directly into the pan and gently stir to combine with the vegetables.</li>
             <li>Cook until eggs reach your desired consistency.</li>
             <li>Garnish with fresh parsley and serve hot with bread.</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fresh Salads Recipe Modal -->
+  <div class="modal fade" id="saladModal" tabindex="-1" aria-labelledby="saladModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="saladModalLabel">Mediterranean Salad Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6>Description</h6>
+          <p>A refreshing Mediterranean salad packed with fresh vegetables, feta cheese, and olives. Perfect for a light lunch or as a side dish.</p>
+          
+          <h6 class="mt-4">Ingredients</h6>
+          <ul>
+            <li>2 cups mixed greens</li>
+            <li>1 cucumber, diced</li>
+            <li>2 tomatoes, chopped</li>
+            <li>1 red onion, thinly sliced</li>
+            <li>1/2 cup feta cheese, crumbled</li>
+            <li>1/2 cup black olives</li>
+            <li>3 tablespoons olive oil</li>
+            <li>1 tablespoon lemon juice</li>
+            <li>Salt and pepper to taste</li>
+            <li>Fresh oregano</li>
+          </ul>
+          
+          <h6 class="mt-4">Instructions</h6>
+          <ol>
+            <li>Wash and prepare all vegetables.</li>
+            <li>In a large bowl, combine greens, cucumber, tomatoes, and onion.</li>
+            <li>Add feta cheese and olives.</li>
+            <li>In a small bowl, whisk together olive oil, lemon juice, salt, and pepper.</li>
+            <li>Pour dressing over salad and toss gently.</li>
+            <li>Garnish with fresh oregano and serve immediately.</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sweet Desserts Recipe Modal -->
+  <div class="modal fade" id="dessertModal" tabindex="-1" aria-labelledby="dessertModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="dessertModalLabel">Chocolate Lava Cake Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6>Description</h6>
+          <p>A decadent chocolate dessert with a molten center. Serve warm with vanilla ice cream for the ultimate indulgence.</p>
+          
+          <h6 class="mt-4">Ingredients</h6>
+          <ul>
+            <li>1/2 cup butter</li>
+            <li>4 oz dark chocolate</li>
+            <li>2 eggs</li>
+            <li>2 egg yolks</li>
+            <li>1/4 cup sugar</li>
+            <li>2 tablespoons flour</li>
+            <li>Pinch of salt</li>
+            <li>Butter and cocoa for ramekins</li>
+            <li>Vanilla ice cream (optional)</li>
+          </ul>
+          
+          <h6 class="mt-4">Instructions</h6>
+          <ol>
+            <li>Preheat oven to 425°F (220°C).</li>
+            <li>Butter and dust 4 ramekins with cocoa powder.</li>
+            <li>Melt butter and chocolate together in a double boiler.</li>
+            <li>In a bowl, whisk eggs, egg yolks, and sugar until thick.</li>
+            <li>Fold melted chocolate into egg mixture.</li>
+            <li>Gently fold in flour and salt.</li>
+            <li>Divide batter among ramekins.</li>
+            <li>Bake for 12-14 minutes until edges are firm but center is soft.</li>
+            <li>Let cool for 1 minute, then invert onto plates.</li>
+            <li>Serve immediately with ice cream.</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Meals Recipe Modal -->
+  <div class="modal fade" id="quickMealModal" tabindex="-1" aria-labelledby="quickMealModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="quickMealModalLabel">Stir-Fried Noodles Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6>Description</h6>
+          <p>Quick and delicious stir-fried noodles with vegetables and your choice of protein. Ready in under 15 minutes!</p>
+          
+          <h6 class="mt-4">Ingredients</h6>
+          <ul>
+            <li>8 oz noodles (rice or egg noodles)</li>
+            <li>2 tablespoons vegetable oil</li>
+            <li>2 cloves garlic, minced</li>
+            <li>1 cup mixed vegetables (carrots, bell peppers, broccoli)</li>
+            <li>1 cup protein of choice (chicken, shrimp, or tofu)</li>
+            <li>3 tablespoons soy sauce</li>
+            <li>1 tablespoon oyster sauce</li>
+            <li>1 teaspoon sesame oil</li>
+            <li>Green onions for garnish</li>
+            <li>Sesame seeds (optional)</li>
+          </ul>
+          
+          <h6 class="mt-4">Instructions</h6>
+          <ol>
+            <li>Cook noodles according to package directions, drain and set aside.</li>
+            <li>Heat oil in a large wok or skillet over high heat.</li>
+            <li>Add garlic and stir-fry for 30 seconds.</li>
+            <li>Add protein and cook until done, about 3-4 minutes.</li>
+            <li>Add vegetables and stir-fry for 2-3 minutes.</li>
+            <li>Add cooked noodles to the wok.</li>
+            <li>Pour in soy sauce, oyster sauce, and sesame oil.</li>
+            <li>Toss everything together for 1-2 minutes.</li>
+            <li>Garnish with green onions and sesame seeds.</li>
+            <li>Serve hot and enjoy!</li>
           </ol>
         </div>
         <div class="modal-footer">
