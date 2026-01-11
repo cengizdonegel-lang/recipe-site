@@ -2,6 +2,27 @@
   margin-bottom: 12px;
 }
 
+/* Contact page styles */
+
+/* Contact card wrapper with highlighted border */
+.contact-card-wrapper {
+  border: 3px solid #ff8c00;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.2);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.contact-card-wrapper .card-body {
+  padding: 2rem;
+}
+
+/* Company logo styling */
+.company-logo {
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
 .contact-form {
   max-width: 420px;
   margin-top: 20px;
