@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | My Recipe Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Global -->
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../styles/base.css">
+
+  <!-- Components -->
+  <link rel="stylesheet" href="../../components/header/header.css">
+  <link rel="stylesheet" href="/components/categories/categories.css">
+  <link rel="stylesheet" href="/components/card/card.css">
+  <link rel="stylesheet" href="../../components/footer/footer.css">
+
+  <!-- Page specific -->
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+  <div class="site-wrapper">
+    <!-- HEADER -->
+    <div data-include="/components/header/header.html"></div>
+
+  <!-- MAIN -->
+  <main class="site-main container contact">
+      <div class="row">
+        <aside class="col-md-3">
+          <div class="card categories-card contact-style">
+            <div class="card-body">
+              <div data-include="/components/categories/categories.html"></div>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-md-9 main-content">
+          <h1>Contact</h1>
+
+          <p class="muted">
+            If you have questions about the recipe or this project, feel free to send a message.
+          </p>
+
+          <form class="contact-form" id="contactForm">
+            <label>
+              Name
+              <input type="text" required placeholder="Your name">
+            </label>
+
+            <label>
+              Email
+              <input type="email" required placeholder="your@email.com">
+            </label>
+
+            <label>
+              Message
+              <textarea rows="4" placeholder="Your message"></textarea>
+            </label>
+
+            <button type="submit" class="primary">Send Message</button>
+
+            <p class="form-status" id="formStatus"></p>
+          </form>
+        </div>
+      </div>
+
+    <!-- FOOTER -->
+    <div data-include="/components/footer/footer.html"></div>
+  </div>
+
+  <!-- Page JS -->
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="contact.js"></script>
+  <script src="/components/include.js" defer></script>
+  <script src="/components/card/card.js" defer></script>
+</body>
+</html>
