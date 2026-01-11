@@ -83,8 +83,8 @@
 .category-list a.active,
 .category-list a[aria-pressed="true"] {
   color: #fff;
-  background: #0d6efd; /* Bootstrap primary */
-  border-color: rgba(13,110,253,0.7);
+  background: #ffcc99; /* Light orange */
+  border-color: #ff8c00;
 }
 
 @media (max-width: 767px) {

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Favorite Practical Dish | Recipe Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/components/header/header.css">
+  <link rel="stylesheet" href="/components/categories/categories.css">
+  <link rel="stylesheet" href="/components/card/card.css">
+  <link rel="stylesheet" href="/components/footer/footer.css">
+</head>
+
+<body>
+  <div class="site-wrapper">
+    <div data-include="/components/header/header.html"></div>
+
+    <main class="site-main container">
+      <div class="row mb-4">
+        <aside class="col-md-3 d-none d-md-block">
+          <div class="card categories-card home-style">
+            <div class="card-body">
+              <div data-include="/components/categories/categories.html"></div>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-md-9">
+          <h1>My Favorite Practical Dish</h1>
+          <p class="lead">Menemen - A beloved Turkish breakfast that's simple, quick, and absolutely delicious.</p>
+          
+          <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
+            <div class="col">
+              <div class="card h-100" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#menemenModal">
+                <img src="/assets/images/pasta.jpg" class="card-img-top" alt="Menemen">
+                <div class="card-body">
+                  <h5 class="card-title">Menemen</h5>
+                  <p class="card-text">Traditional Turkish egg dish with tomatoes and peppers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div data-include="/components/footer/footer.html"></div>
+  </div>
+
+  <!-- Menemen Recipe Modal -->
+  <div class="modal fade" id="menemenModal" tabindex="-1" aria-labelledby="menemenModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="menemenModalLabel">Menemen Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6>Description</h6>
+          <p>Menemen is a traditional Turkish breakfast dish made with eggs, tomatoes, green peppers, and spices. It's simple, flavorful, and perfect for starting your day.</p>
+          
+          <h6 class="mt-4">Ingredients</h6>
+          <ul>
+            <li>3 large eggs</li>
+            <li>2 medium tomatoes, diced</li>
+            <li>1 green pepper, diced</li>
+            <li>1 onion, finely chopped (optional)</li>
+            <li>2 tablespoons olive oil</li>
+            <li>1 teaspoon red pepper flakes</li>
+            <li>Salt and black pepper to taste</li>
+            <li>Fresh parsley for garnish</li>
+          </ul>
+          
+          <h6 class="mt-4">Instructions</h6>
+          <ol>
+            <li>Heat olive oil in a pan over medium heat.</li>
+            <li>Add the diced green peppers and onions, sauté until softened.</li>
+            <li>Add the diced tomatoes and cook until they break down and release their juices.</li>
+            <li>Season with salt, pepper, and red pepper flakes.</li>
+            <li>Crack the eggs directly into the pan and gently stir to combine with the vegetables.</li>
+            <li>Cook until eggs reach your desired consistency.</li>
+            <li>Garnish with fresh parsley and serve hot with bread.</li>
+          </ol>
+          
+          <div class="alert alert-info mt-4">
+            <strong>Chef's Tip:</strong> For a creamier texture, don't overcook the eggs. Some prefer it with large egg curds, while others like it more scrambled - it's all about personal preference!
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="/components/include.js" defer></script>
+</body>
+</html>
