@@ -16,12 +16,12 @@
   padding: 2rem;
 }
 
-/* Company logo styling - circular */
+/* Company logo styling */
 .company-logo {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
+  max-width: 200px;
+  height: auto;
   border: 4px solid #ff8c00;
+  border-radius: 8px;
   box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
   margin-bottom: 1rem;
 }
