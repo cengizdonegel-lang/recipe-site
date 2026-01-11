@@ -11,7 +11,7 @@
   padding: 28px 16px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 24px;
   flex-wrap: wrap;
   min-height: 72px; /* ensure consistent vertical size across pages */
@@ -89,32 +89,34 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 8px;
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
   text-decoration: none;
-  color: #cbd5e1;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  transition: transform 0.12s ease, background 0.12s ease;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.12);
+  color: #e6eef6;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  transition: transform 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .logo-block:hover,
 .logo-block:focus {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   color: #fff;
-  background: rgba(255,255,255,0.04);
+  background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.06));
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .logo-block .logo-text {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
-  color: #e6eef6;
+  color: #fff;
 }
 
 .logo-block svg { 
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
 }
 
 /* Accessible screen-reader only helper */
