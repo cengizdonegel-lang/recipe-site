@@ -106,6 +106,7 @@
   color: #fff;
   background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.06));
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border-color: #ff8c00;
 }
 
 .logo-block .logo-text {
@@ -117,6 +118,10 @@
 .logo-block svg { 
   width: 28px;
   height: 28px;
+}
+
+.logo-block i {
+  font-size: 28px;
 }
 
 /* Accessible screen-reader only helper */
