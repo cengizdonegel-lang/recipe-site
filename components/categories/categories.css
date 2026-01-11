@@ -68,13 +68,14 @@
   border-radius: 8px;
   border: 1px solid rgba(255,255,255,0.03);
   background: transparent;
-  transition: background 0.12s ease, transform 0.08s ease, color 0.12s ease;
+  transition: background 0.12s ease, transform 0.08s ease, color 0.12s ease, border-color 0.12s ease;
 }
 
 .category-list a:hover,
 .category-list a:focus {
   color: #fff;
   background: rgba(255,255,255,0.04);
+  border-color: #ff8c00;
   transform: translateY(-2px);
 }
 
