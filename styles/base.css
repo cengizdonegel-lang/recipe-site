@@ -44,38 +44,4 @@
 
 /* Categories styles moved to components/categories/categories.css */
 
-
-/* Carousel tweaks */
-.carousel-item img {
-  /* Slightly larger hero visuals + extended bottom space (~20rem) */
-  max-height: calc(520px + 20rem);
-  object-fit: cover;
-}
-
-/* Ensure the carousel container extends downward by ~20rem so slides appear taller */
-.carousel {
-  min-height: calc(520px + 20rem);
-}
-
-.carousel-caption {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0,0,0,0.55);
-  padding: 18px 24px;
-  border-radius: 10px;
-  text-align: center;
-  max-width: 75%;
-  color: #fff;
-  z-index: 6;
-}
-
-@media (max-width: 767px) {
-  /* On smaller screens cap heights to avoid excessive vertical space */
-  .carousel-item img { max-height: 420px; }
-  .carousel { min-height: 420px; }
-  .carousel-caption { max-width: 90%; left: 0.75rem; right: 0.75rem; top: auto; transform: none; bottom: 1.5rem; text-align: left; }
-}
-
 /* Carousel menu positioning moved to components/categories/categories.css */
